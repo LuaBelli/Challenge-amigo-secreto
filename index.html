@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amigo Secreto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+ <header>
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo circular -->
+  <circle cx="40" cy="40" r="40" fill="#FFF0C1"/>
+  
+  <!-- Cabelo -->
+  <path d="M20 30 Q40 10 60 30 Q55 60 25 60 Z" fill="#2D2D2D"/>
+  
+  <!-- Rosto -->
+  <ellipse cx="40" cy="38" rx="18" ry="22" fill="#F6D0A6"/>
+  
+  <!-- Óculos -->
+  <rect x="24" y="28" width="12" height="10" rx="3" fill="#E3BBC6"/>
+  <rect x="44" y="28" width="12" height="10" rx="3" fill="#E3BBC6"/>
+  <line x1="36" y1="33" x2="44" y2="33" stroke="#E3BBC6" stroke-width="2"/>
+  
+  <!-- Olhos -->
+  <circle cx="30" cy="33" r="3" fill="#5A3E2B"/>
+  <circle cx="50" cy="33" r="3" fill="#5A3E2B"/>
+  
+  <!-- Sobrancelhas -->
+  <path d="M26 28 Q30 25 34 28" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
+  <path d="M46 28 Q50 25 54 28" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
+  
+  <!-- Boca -->
+  <path d="M32 45 Q40 50 48 45" stroke="#D67D6C" stroke-width="2" fill="none"/>
+</svg>
+  <h1>Amigo Secreto 🎁</h1>
+  <p>Adicione seus amigos e descubra quem será o sorteado!</p>
+</header>
+
+ <main class="container" id="appContainer" aria-live="polite">
+    <div class="input-area">
+      <input type="text" id="nomeAmigo" placeholder="Digite o nome do amigo" aria-label="Nome do amigo" />
+      <button id="btnAdicionar" aria-label="Adicionar amigo">➕ Adicionar</button>
+    </div>
+
+    <ul id="listaAmigos" class="lista" aria-label="Lista de amigos"></ul>
+
+    <button id="btnSortear" class="btn-sortear" aria-label="Sortear amigo">🎲 Sortear Amigo</button>
+
+    <div id="resultado" class="resultado" role="status" aria-live="assertive"></div>
+
+    <!-- Camada de SVG para confetes (fica por cima do card) -->
+    <svg id="confettiStage" class="confetti-stage" width="0" height="0" viewBox="0 0 100 100" aria-hidden="true"></svg>
+  </main>
+
+  <footer>
+    <p>✨ Desafio Amigo Secreto✨</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
